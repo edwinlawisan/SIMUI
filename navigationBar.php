@@ -20,7 +20,7 @@
           Profil
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="tampilkanBerita.php">Daftar Kepanitiaan</a>
+          <a class="dropdown-item" href="tampilkanKepanitiaan.php">Daftar Kepanitiaan</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="tampilkanEvent.php">Daftar Event</a>
           <div class="dropdown-divider"></div>

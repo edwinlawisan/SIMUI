@@ -68,6 +68,7 @@ img {
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- bootstrap csss -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -85,7 +86,11 @@ include 'navigationBar.php';
     <div class="jumbotron">
         <h1 class="display-4" style="color: dimgrey">Daftar Kepanitiaan</h1>
     </div>
+
+   
+
     <div class="row">
+    
         <div class="col-sm">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
@@ -94,7 +99,7 @@ include 'navigationBar.php';
                 <p class="card-text">Seni Pemersatu Bangsa</p>
                 <h6 class="card-subtitle mb-2 text-muted">bem@ui.ac.id</h6>
                 <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
+                <a href="#" class="card-link" onclick="document.getElementById('id01').style.display='block'" style="color: red">Delete</a>
               </div>
             </div>
         </div>
@@ -106,7 +111,7 @@ include 'navigationBar.php';
                 <p class="card-text">Seni Pemersatu Bangsa</p>
                 <h6 class="card-subtitle mb-2 text-muted">bem@ui.ac.id</h6>
                 <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
+                <a href="#" class="card-link" onclick="document.getElementById('id01').style.display='block'" style="color: red">Delete</a>
               </div>
             </div>
         </div>
@@ -118,7 +123,7 @@ include 'navigationBar.php';
                 <p class="card-text">Seni Pemersatu Bangsa</p>
                 <h6 class="card-subtitle mb-2 text-muted">bem@ui.ac.id</h6>
                 <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
+                <a href="#" class="card-link" onclick="document.getElementById('id01').style.display='block'" style="color: red">Delete</a>
               </div>
             </div>
         </div>
@@ -130,7 +135,7 @@ include 'navigationBar.php';
                 <p class="card-text">Seni Pemersatu Bangsa</p>
                 <h6 class="card-subtitle mb-2 text-muted">bem@ui.ac.id</h6>
                 <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
+                <a href="#" class="card-link" onclick="document.getElementById('id01').style.display='block'" style="color: red">Delete</a>
               </div>
             </div>
         </div>
@@ -142,7 +147,7 @@ include 'navigationBar.php';
                 <p class="card-text">Seni Pemersatu Bangsa</p>
                 <h6 class="card-subtitle mb-2 text-muted">bem@ui.ac.id</h6>
                 <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
+                <a href="#" class="card-link" onclick="document.getElementById('id01').style.display='block'" style="color: red">Delete</a>
               </div>
             </div>
         </div>
@@ -154,7 +159,7 @@ include 'navigationBar.php';
                 <p class="card-text">Seni Pemersatu Bangsa</p>
                 <h6 class="card-subtitle mb-2 text-muted">bem@ui.ac.id</h6>
                 <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
+                <a href="#" class="card-link" onclick="document.getElementById('id01').style.display='block'" style="color: red">Delete</a>
               </div>
             </div>
         </div>
@@ -166,7 +171,7 @@ include 'navigationBar.php';
                 <p class="card-text">Seni Pemersatu Bangsa</p>
                 <h6 class="card-subtitle mb-2 text-muted">bem@ui.ac.id</h6>
                 <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
+                <a href="#" class="card-link" onclick="document.getElementById('id01').style.display='block'" style="color: red">Delete</a>
               </div>
             </div>
         </div>
@@ -178,7 +183,7 @@ include 'navigationBar.php';
                 <p class="card-text">Seni Pemersatu Bangsa</p>
                 <h6 class="card-subtitle mb-2 text-muted">bem@ui.ac.id</h6>
                 <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
+                <a href="#" class="card-link" onclick="document.getElementById('id01').style.display='block'" style="color: red">Delete</a>
               </div>
             </div>
         </div>
@@ -190,10 +195,13 @@ include 'navigationBar.php';
                 <p class="card-text">Seni Pemersatu Bangsa</p>
                 <h6 class="card-subtitle mb-2 text-muted">bem@ui.ac.id</h6>
                 <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
+                <a href="#" class="card-link" onclick="document.getElementById('id01').style.display='block'" style="color: red">Delete</a>
               </div>
             </div>
         </div>
+        <?php
+        include 'delButton.php';
+        ?>
     </div>
 
         <!-- The Modal -->
@@ -266,12 +274,21 @@ include 'navigationBar.php';
               </div>
             </div>
             <div class="modal-footer">
-                <button class="btn" style="background-color: dimgrey; color : white;">Update Kepanitiaan</button>
-                <button class="btn" style="background-color: red; color : white;">Delete Kepanitiaan</button>
+                <button class="btn" style="background-color: dimgrey; color : white;" onclick="document.getElementById('id03').style.display='block'">Update Kepanitiaan</button>
+                <div class = "w3-container">
+                <button class="btn" style="background-color: red; color : white;" onclick="document.getElementById('id02').style.display='block'">Delete Kepanitiaan</button>
+                </div>
             </div>
+            <?php
+              include 'delButton2.php';
+             ?>
+             <?php
+              include 'updButton.php';
+             ?>
           </div>
           
         </div>
+        
   </div>
 </div>
 

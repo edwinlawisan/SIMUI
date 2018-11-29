@@ -12,12 +12,12 @@
 
 <body>
 	<?php include 'navigationBar.php'; ?>
-	<div class="w3-container">
-		<div class="w3-container">
-			<div class="w3-container w3-teal">
-				<h1>Buat Organisasi</h1>
-			</div>
-			<form method="post" action="buatOrganisasi.php" class="w3-container w3-padding-16">
+	<div class="container w3-padding-16 w3-margin">
+		<div class="container" style = "width:50%;">
+				<div class="w3-container w3-teal">
+					<h1>Buat Organisasi</h1>
+				</div>
+			<form method="post" action="buatOrganisasi.php" class="container w3-padding-16 w3-border">
 				<div class="w3-container">
 					<div id="nama_organisasi_container" class="input-field col s12">
 						<input id="nama_organisasi" name="nama_organisasi" type="text" class="validate" required>

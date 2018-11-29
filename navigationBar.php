@@ -36,7 +36,7 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Organisasi</a>
            <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Kepanitiaan</a>
+          <a class="dropdown-item" href="buatKepanitiaan.php">Kepanitiaan</a>
         </div>
       </li>
     <?php

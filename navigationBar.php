@@ -34,7 +34,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Event</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Organisasi</a>
+          <a class="dropdown-item" href="buatOrganisasi.php">Organisasi</a>
            <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Kepanitiaan</a>
         </div>

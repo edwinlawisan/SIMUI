@@ -94,9 +94,12 @@ include 'navigationBar.php';
                 <p class="card-text">#KolaborasiDalamAksi</p>
                 <h6 class="card-subtitle mb-2 text-muted">bem@cs.ui.ac.id</h6>
                 <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
+                <a href="#" class="card-link" style="color: red" onclick="document.getElementById('id01').style.display='block'">Delete</a>
               </div>
             </div>
+			 <?php
+				include 'delButton.php';
+				?>
         </div>
         <div class="col-sm">
             <div class="card" style="width: 18rem;">
@@ -260,11 +263,16 @@ include 'navigationBar.php';
               </div>
             </div>
             <div class="modal-footer">
-                <button class="btn" style="background-color: dimgrey; color : white;">Update Organisasi</button>
-                <button class="btn" style="background-color: red; color : white;">Delete Organisasi</button>
-            </div>
+                <button class="btn" style="background-color: dimgrey; color : white;" onclick=window.location.href="updOrganisasi.php">Update Organisasi</button>
+                <button class="btn" style="background-color: red; color : white;" onclick="document.getElementById('id02').style.display='block'">Delete Organisasi</button>
+            </div> 
           </div>
-          
+		  <?php
+              include 'updOrganisasi.php';
+          ?>
+          <?php
+              include 'delButton2.php';
+           ?>
         </div>
   </div>
 </div>

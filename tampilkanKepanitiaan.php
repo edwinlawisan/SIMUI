@@ -290,6 +290,13 @@ include 'navigationBar.php';
         </div>
         
   </div>
+
+  <div class="w3-container w3-padding-16 w3-right">
+	<button onclick="document.getElementById('buatPanitia').style.display='block'" class="w3-button w3-grey w3-large ">Tambahkan Kepanitiaan</button>
+    <?php
+        include 'createButton.php';
+    ?>
+  </div>
 </div>
 
 <script>

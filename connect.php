@@ -1,4 +1,7 @@
 <!-- Edwin Lawisan 1606876790 --> 
 <?php
-
-$dbconnection = pg_connect("host=dbpg.cs.ui.ac.id dbname=db400 user=db400 password=eiShe6no");
+	function connection(){
+		$dbconnection = pg_connect("host=localhost dbname=postgres user=postgres password=12101998");
+		return $dbconnection;
+	}
+?>

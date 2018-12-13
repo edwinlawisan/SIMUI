@@ -83,7 +83,7 @@ include 'navigationBar.php';
 
 <div class="container" style="margin-top: 40px;">
     <div class="jumbotron">
-        <h1 class="display-4" style="color: dimgrey">Daftar Event</h1>
+        <h1 class="display-4" style="color: dimgrey">Event List</h1>
     </div>
     <div class="row">
         <?php
@@ -115,12 +115,6 @@ link_clicked = function(element){
   temp = element.getAttribute("value");
   window.location.href = "detil_event.php?id=" + temp;
 };
-
-//$.ajax({
-  //type: 'POST',
-  //url: 'tampilkanEvent.php',
-  //data: {'variable': temp},
-//});
 
 </script>
 </body>

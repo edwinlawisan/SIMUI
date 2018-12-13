@@ -20,38 +20,37 @@ include 'navigationBar.php';
 require "connect.php";
 $dbconn = connection();
 $id = $_GET["id"];
-$task = "SELECT * FROM SIMUI.EVENT WHERE id_event =".$id.";";
+$task = "SELECT p.* FROM SIMUI.PEMBUAT_EVENT p, SIMUI.ORGANISASI o WHERE p.id=o.id_organisasi and o.id_organisasi ='" .$id."';";
 $result =  pg_query($dbconn, $task);
-$row = pg_fetch_assoc($result);
+$row = pg_fetch_assoc($result);	
 pg_close($dbconn);
+
 ?>
 
 <div class="container" style="margin-top: 40px;">
     <div class="jumbotron">
     	<?php
         	echo '<h1 class="display-4" style="color: dimgrey">'. $row["nama"] . '</h1>';
-    		echo '<h3 class="display-6" style="color: dimgrey">EVENT ID : '. $row["id_event"] . '</h3>';
+    		echo '<h3 class="display-6" style="color: dimgrey">ID : '. $row["id"] . '</h3>';
     	?>
     </div>
     <div class="row">
 		<!--Right Side -->
 		<div class="col-8 container">
 			<div class="card-body">
-				<h5 class="card-title">Event Makers ID</h5>
+				<h5 class="card-title">Level</h5>
 				<?php
-				echo '<a href="#" >';
-				echo '<h6 class="card-subtitle mb-2 text-muted" onclick="id_clicked('.$row["id_pembuat_event"].')">'.$row["id_pembuat_event"].'</h6>';
-				echo "</a>";
+				echo '<h6 class="card-subtitle mb-2 text-muted">'.$row["tingkatan"].'</h6>';
 				?>
 				</br>
-				<h5 class="card-title">Kapasitas</h5>
+				<h5 class="card-title">Category</h5>
 				<?php
-				echo '<h6 class="card-subtitle mb-2 text-muted">'.$row["kapasitas"].'</h6>';
+				echo '<h6 class="card-subtitle mb-2 text-muted">'.$row["kategori"].'</h6>';
 				?>
 				</br>
 				<h5 class="card-title">Deskripsi</h5>
 				<?php
-				echo '<h6 class="card-subtitle mb-2 text-muted">Rp.'.$row["deskripsi_singkat"].'</h6>';
+				echo '<h6 class="card-subtitle mb-2 text-muted">'.$row["deskripsi"].'</h6>';
 				?>
 			</div>
 		</div>
@@ -59,28 +58,24 @@ pg_close($dbconn);
 		<!--Left Side -->
 		<div class="col-4 card">
 			<div class="card-body">
-				<h5 class="card-title">Date & Time</h5>
+				<h5 class="card-title">Contact Person</h5>
 				<?php
-				echo '<h6 class="card-subtitle mb-2 text-muted">'.$row["waktu"].'</h6>';
+				echo '<h6 class="card-subtitle mb-2 text-muted">'.$row["contact_person"].'</h6>';
 				?>
 				</br>
-				<h5 class="card-title">Place</h5>
+				<h5 class="card-title">E-mail</h5>
 				<?php
-				echo '<h6 class="card-subtitle mb-2 text-muted">'.$row["lokasi"].'</h6>';
+				echo '<h6 class="card-subtitle mb-2 text-muted">'.$row["email"].'</h6>';
 				?>
 				</br>
-				<h5 class="card-title">Price</h5>
+				<h5 class="card-title">Website</h5>
 				<?php
-				echo '<h6 class="card-subtitle mb-2 text-muted">Rp.'.$row["harga_tiket"].'</h6>';
+				echo '<h6 class="card-subtitle mb-2 text-muted">'.$row["alamat_website"].'</h6>';
 				?>
 			</div>
 		</div>
 	</div>	
 </div>
-
-<script>
-	
-</script>>
 
 </body>
 </html>

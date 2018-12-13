@@ -2,12 +2,14 @@
 <html>
 
 <style>
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 40%;
+    height: 85%;
     border-radius: 5px;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .card:hover {
@@ -65,15 +67,15 @@ img {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- bootstrap csss -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- bootstrap csss -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
 </head>
-
 <body>
     
 <?php
@@ -83,227 +85,38 @@ include 'navigationBar.php';
 
 <div class="container" style="margin-top: 40px;">
     <div class="jumbotron">
-        <h1 class="display-4" style="color: dimgrey">Daftar Organisasi</h1>
+        <h1 class="display-4" style="color: dimgrey">Organization List</h1>
     </div>
     <div class="row">
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">BEM Fasilkom UI</h5>
-                <a href="">bem.cs.ui.ac.id</a>
-                <p class="card-text">#KolaborasiDalamAksi</p>
-                <h6 class="card-subtitle mb-2 text-muted">bem@cs.ui.ac.id</h6>
-                <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red" onclick="document.getElementById('id01').style.display='block'">Delete</a>
-              </div>
-            </div>
-			 <?php
-				include 'delButton.php';
-				?>
-        </div>
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">BEM Fasilkom UI</h5>
-                <a href="">bem.cs.ui.ac.id</a>
-                <p class="card-text">#KolaborasiDalamAksi</p>
-                <h6 class="card-subtitle mb-2 text-muted">bem@cs.ui.ac.id</h6>
-                <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
-              </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">BEM Fasilkom UI</h5>
-                <a href="">bem.cs.ui.ac.id</a>
-                <p class="card-text">#KolaborasiDalamAksi</p>
-                <h6 class="card-subtitle mb-2 text-muted">bem@cs.ui.ac.id</h6>
-                <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
-              </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">BEM Fasilkom UI</h5>
-                <a href="">bem.cs.ui.ac.id</a>
-                <p class="card-text">#KolaborasiDalamAksi</p>
-                <h6 class="card-subtitle mb-2 text-muted">bem@cs.ui.ac.id</h6>
-                <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
-              </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">BEM Fasilkom UI</h5>
-                <a href="">bem.cs.ui.ac.id</a>
-                <p class="card-text">#KolaborasiDalamAksi</p>
-                <h6 class="card-subtitle mb-2 text-muted">bem@cs.ui.ac.id</h6>
-                <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
-              </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">BEM Fasilkom UI</h5>
-                <a href="">bem.cs.ui.ac.id</a>
-                <p class="card-text">#KolaborasiDalamAksi</p>
-                <h6 class="card-subtitle mb-2 text-muted">bem@cs.ui.ac.id</h6>
-                <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
-              </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">BEM Fasilkom UI</h5>
-                <a href="">bem.cs.ui.ac.id</a>
-                <p class="card-text">#KolaborasiDalamAksi</p>
-                <h6 class="card-subtitle mb-2 text-muted">bem@cs.ui.ac.id</h6>
-                <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
-              </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">BEM Fasilkom UI</h5>
-                <a href="">bem.cs.ui.ac.id</a>
-                <p class="card-text">#KolaborasiDalamAksi</p>
-                <h6 class="card-subtitle mb-2 text-muted">bem@cs.ui.ac.id</h6>
-                <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
-              </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">BEM Fasilkom UI</h5>
-                <a href="">bem.cs.ui.ac.id</a>
-                <p class="card-text">#KolaborasiDalamAksi</p>
-                <h6 class="card-subtitle mb-2 text-muted">bem@cs.ui.ac.id</h6>
-                <a href="#" class="card-link Detail-btn">Detail</a>
-                <a href="#" class="card-link" style="color: red">Delete</a>
-              </div>
-            </div>
-        </div>
-    </div>
-
-        <!-- The Modal -->
-     <div class="modal flex" id="detail" role="dialog">
-        <div class="modal-dialog">
-        
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <h3 class="modal-title">BEM Fasilkom UI</h3>
-              <!--<h2 class="modal-title">adsfsa</h2>-->
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                  <div class="col-4">
-                      <p>Id</p>
-                  </div>
-                  <div class="col-8">
-                      <p>: 1606889811</p>
-                  </div>
-                  <div class="col-4">
-                      <p>Id Email</p>
-                  </div>
-                  <div class="col-8">
-                      <p>: bem@cs.ui.ac.id</p>
-                  </div>
-                  <div class="col-4">
-                      <p>Website</p>
-                  </div>
-                  <div class="col-8">
-                      <p>: bem.cs.ui.ac.id</p>
-                  </div>
-                  <div class="col-4">
-                      <p>Tingkatan</p>
-                  </div>
-                  <div class="col-8">
-                      <p>: Fakultas</p>
-                  </div>
-                  <div class="col-4">
-                      <p>Kategori</p>
-                  </div>
-                  <div class="col-8">
-                      <p>: Organisasi</p>
-                  </div>
-                  <div class="col-4">
-                      <p>Logo</p>
-                  </div>
-                  <div class="col-8">
-                      <p>: <strong>Not Found</strong></p>
-                  </div>
-                  <div class="col-4">
-                      <p>Deskripsi</p>
-                  </div>
-                  <div class="col-8">
-                      <p>: #KolaborasiDalamAksi</p>
-                  </div>
-                  <div class="col-4">
-                      <p>Contact Person</p>
-                  </div>
-                  <div class="col-8">
-                      <p>: 08131248595</p>
-                  </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn" style="background-color: dimgrey; color : white;" onclick=window.location.href="updOrganisasi.php">Update Organisasi</button>
-                <button class="btn" style="background-color: red; color : white;" onclick="document.getElementById('id02').style.display='block'">Delete Organisasi</button>
-            </div> 
-          </div>
-		  <?php
-              include 'updOrganisasi.php';
+        <?php
+            require "connect.php";
+            $dbconn = connection();
+            $task = "SELECT p.* FROM SIMUI.PEMBUAT_EVENT p, SIMUI.ORGANISASI o WHERE p.id=o.id_organisasi;";
+            $result =  pg_query($dbconn, $task);
+            pg_close($dbconn);
+              while ($row = pg_fetch_assoc($result)) {
+                echo '<div class="col-sm">';
+                echo '<div class="card" style="width: 18rem;">';
+                echo '<div class="card-body">';
+                echo '<h5 class="card-title">' . $row['nama'] . '</h5>';
+                echo '<h6 class="card-subtitle mb-2 text-muted">' . $row['email']. '</h6>';
+                echo '<h5 class="text-harga">"' . $row['deskripsi']. '"</h5>';
+                echo '<a href="" class="card-text" style="color:dimgrey;">' . $row['alamat_website']. '</a> </br>';
+                echo '<a href="#" onclick="link_clicked(this)" class="card-link" value='. $row['id'] .'>Detail Organisasi</a>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+              }
           ?>
-          <?php
-              include 'delButton2.php';
-           ?>
-        </div>
-  </div>
+    </div>
 </div>
 
 <script>
-// Get the modal
-var modal = document.getElementById('detail');
 
-// Get the button that opens the modal
-var btn = document.getElementsByClassName("card-link Detail-btn")[0];
+link_clicked = function(element){
+  temp = element.getAttribute("value");
+  window.location.href = "detil_organisasi.php?id=" + temp;
+};
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(Organisasi) {
-    if (Organisasi.target == modal) {
-        modal.style.display = "none";
-    }
-}
 </script>
-
-
 </body>

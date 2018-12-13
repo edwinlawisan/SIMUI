@@ -40,7 +40,9 @@ pg_close($dbconn);
 			<div class="card-body">
 				<h5 class="card-title">Organization Id</h5>
 				<?php
+				echo '<a href="detil_organisasi.php?id=' .$row["id_organisasi"]. '">';
 				echo '<h6 class="card-subtitle mb-2 text-muted">'.$row["id_organisasi"].'</h6>';
+				echo '</a>';
 				?>
 				</br>
 				<h5 class="card-title">Level</h5>

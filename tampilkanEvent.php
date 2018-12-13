@@ -2,6 +2,21 @@
 <html>
 
 <style>
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none; 
+  margin-top: 20px;
+}
+
+.center {
+  margin: auto;
+  width: 47%;
+  padding: 10px;
+}
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -78,6 +93,12 @@ img {
     
 <?php
 include 'navigationBar.php';
+if (isset($_GET['pageno'])) {
+    $pageno = $_GET['pageno'];
+} else {
+    $pageno = 1;
+    }
+$item_start = ($pageno - 1) * 9;
 ?>
 
 
@@ -89,8 +110,12 @@ include 'navigationBar.php';
         <?php
             require "connect.php";
             $dbconn = connection();
-            $task = "SELECT * FROM SIMUI.EVENT;";
+            $task = "SELECT * FROM SIMUI.EVENT  LIMIT 9 OFFSET " .$item_start.";";
             $result =  pg_query($dbconn, $task);
+            $count_sql = "SELECT count(*) AS itung from SIMUI.EVENT";
+            $counting = pg_query($dbconn, $count_sql);
+            $count = pg_fetch_assoc($counting);
+            $total_pages = $count['itung'] / 9;
             pg_close($dbconn);
               while ($row = pg_fetch_assoc($result)) {
                 echo '<div class="col-sm">';
@@ -107,6 +132,19 @@ include 'navigationBar.php';
               }
           ?>
     </div>
+</div>
+
+<div class="center" ">
+<ul class="pagination center">
+    <li><a href="?pageno=1">First</a></li>
+        <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
+            <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Prev</a>
+        </li>
+        <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+            <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Next</a>
+        </li>
+        <li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
+</ul>
 </div>
 
 <script>

@@ -88,6 +88,7 @@ img {
     <!-- bootstrap csss -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 <body>
@@ -106,6 +107,7 @@ $item_start = ($pageno - 1) * 9;
 <div class="container" style="margin-top: 40px;">
     <div class="jumbotron">
         <h1 class="display-4" style="color: dimgrey">Organization List</h1>
+        <a class="w3-button w3-gray w3-large" href="buatOrganisasi.php">Create Organization</a>
     </div>
     <div class="row">
         <?php

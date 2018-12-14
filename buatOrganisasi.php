@@ -62,16 +62,55 @@
 						<option value="StandUpComedy">Stand Up Comedy</option>
 					</select></p>
 					<p>
-					<label class="w3-text-teal" for="logo"><b>Logo</b></label>
-					<input class="w3-input w3-border w3-light-grey" id="logo" name="logo" type="file" class="validate"></p>
+					<label class="w3-text-teal" for="logo"><b>URL Logo</b></label>
+					<input class="w3-input w3-border w3-light-grey" id="logo" name="logo" type="text" class="validate"></p>
 					<p>
 					<label class="w3-text-teal" for="deskripsi"><b>Deskripsi</b></label>
 					<input class="w3-input w3-border w3-light-grey" id="deskripsi" name="deskripsi" type="text" class="validate" required></p>
-					<button class="w3-btn w3-teal" type="submit" name="buat_kepanitiaan">Submit</button></p>
+					<button class="w3-btn w3-teal" type="submit" name="buat_organisasi">Submit</button></p>
 			</form>
 		</div>
 	</div>
+	<?php 
+	if (isset($_POST['buat_organisasi'])) {
+		require "connect.php";
+		$con = connection();
+	
+		$id = (rand(1, 100000));
+        $queryid = 'SELECT id FROM simui.pembuat_event WHERE id = "' .$id. '"';
+        $checkid = pg_query($con, $queryid);
+		
+		if(!$checkid){
+            $id = (rand(1, 100000));
+            $checkid = pg_query($con, $queryid);
+        }
+        
+		$nama = $_POST['nama_organisasi'];
+        $tingkatan = $_POST['tingkatan'];
+        $email = $_POST['email'];
+        $website = $_POST['website'];
+        $kategori = $_POST['kategori'];
+        $kontakcp = $_POST['kontak_cp'];
+        $logo = $_POST['logo'];
+		$deskripsi = $_POST['deskripsi'];
+		
+		$sql1 = "INSERT INTO SIMUI.PEMBUAT_EVENT VALUES ($id, $nama, $email, $website, $tingkatan, $kategori, $logo, $deskripsi, $kontakcp)";
+		$sql1 = "INSERT INTO SIMUI.ORGANISASI VALUES ($id)";
+		if(pg_query($con,$sql1)){
+            if(pg_query($con,$sql2)){
+                echo "<script type='text/javascript'>alert('Berhasil Ditambahkan');</script>";
+				echo "masuk";
+			} else {
+				echo "<script type='text/javascript'>alert('Organisasi Salah');</script>";
+				echo preg_last_error();
+            }
+        } else {
+            echo '<script type="text/javascript">alert("' . preg_last_error() . '");</script>';
+        }
+	}	
+?>
 </body>
+
 </html>
 
 <script>

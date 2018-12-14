@@ -1,16 +1,8 @@
+<!-- Edwin Lawisan 1606876790 -->
+
 <?php
-//Start session
 session_start();
-//Check whether the session variable $_SESSION['user_name'] is present or not
-
-if (!isset($_SESSION['user_name']) || (trim($_SESSION['user_name']) == '')) {
-    header("location:login.php");
-    exit();
+if(empty($_SESSION["authenticated"]) || $_SESSION["authenticated"] != 'true') {
+	header('Location: login.php');
 }
-
-if (!isset($_SESSION['role']) || (trim($_SESSION['role']) == '')) {
-    header("location:login.php");
-    exit();
-}
-
 ?>

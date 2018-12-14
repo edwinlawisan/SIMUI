@@ -25,7 +25,7 @@ include 'navigationBar.php';
 					<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-large w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
 					<h2>Buat Kepanitiaan</h2>					
 				</div>
-				<form method="post" action="buatKepanitiaan.php" class="w3-container">
+				<form method="post" action="buatKepanitiaan.php" enctype="multipart/form-data" class="w3-container">
 					<br>
 					<p>
 					<label class="w3-text-teal" for="nama_kepanitiaan"><b>Nama Panitia</b></label>
@@ -56,8 +56,8 @@ include 'navigationBar.php';
 						<option value="StandUpComedy">Stand Up Comedy</option>
 					</select></p>
 					<p>
-					<label class="w3-text-teal" for="logo"><b>Logo</b></label>
-					<input class="w3-input w3-border w3-light-grey" id="logo" name="logo" type="file" class="validate"></p>
+					<label class="w3-text-teal" for="urlfile"><b>Logo</b></label>
+					<input class="w3-input w3-border w3-light-grey" name="urlfile" type="text"/></p>
 					<p>
 					<label class="w3-text-teal" for="deskripsi"><b>Deskripsi</b></label>
 					<input class="w3-input w3-border w3-light-grey" id="deskripsi" name="deskripsi" type="text" class="validate" required></p>
@@ -66,4 +66,36 @@ include 'navigationBar.php';
 			</div>
 		</div>
     </div>
+	<?php 
+		require "connect.php";
+		if (isset($_POST['buat_kepanitiaan'])) {    
+			$conn = connection();
+			
+			$id = (rand(1, 100000));
+			$nama_kepanitiaan = $_POST['nama_kepanitiaan'];
+			$organisasi = $_POST['organisasinya'];
+			$email = $_POST['email'];
+			$website = $_POST['website'];
+			$kategori = $_POST['kategori'];
+			$kontakcp = $_POST['kontak_cp'];
+			$urlfile = $_POST['urlfile'];
+			$deskripsi = $_POST['deskripsi'];
+			
+
+			// $url_berita = $_POST['url_berita'];
+			// $judul = $_POST['judul'];
+			// $topik = $_POST['topik'];
+			// $tags = $_POST['tags'];
+			// $jumlah_kata = $_POST['jumlah_kata'];
+			// $id_universitas = $_POST['id_universitas'];
+			// $sql = "INSERT INTO bmnc.berita VALUES('$url_berita','$judul','$topik','now','now',$jumlah_kata,0,$id_universitas)";
+			// if (pg_query($db,$sql)) {
+			//     echo "Data entered successfully. ";
+			// }else {
+			//     echo "Failed";
+			//     echo "errornya ".pg_last_error(); 
+			// }
+		
+		}
+	?>
 </body>

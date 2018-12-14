@@ -88,6 +88,7 @@ img {
     <!-- bootstrap csss -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 <body>
@@ -104,12 +105,17 @@ $item_start = ($pageno - 1) * 9;
 
 
 <div class="container" style="margin-top: 40px;">
-    <div class="jumbotron">
+    <div class="jumbotron"> 
         <h1 class="display-4" style="color: dimgrey">Comitee List</h1>
-    </div>
-    <div class="row">
+        <button onclick="document.getElementById('buatPanitia').style.display='block'" class="w3-button w3-gray w3-large">Create Comitte</button>
         <?php
             require "connect.php";
+            include 'createButton.php';
+        ?>
+    </div>
+    
+    <div class="row">
+        <?php
             $dbconn = connection();
             $task = "SELECT p.*, k.id_organisasi FROM SIMUI.PEMBUAT_EVENT p, SIMUI.KEPANITIAAN k WHERE p.id=k.id_kepanitiaan LIMIT 9 OFFSET " .$item_start.";";
             $result =  pg_query($dbconn, $task);

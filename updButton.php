@@ -43,3 +43,33 @@
         </form>
     </div>
 </div>
+<?php 
+    require "connect.php";
+    if (isset($_POST['buat_kepanitiaan'])) {    
+        $conn = connection();
+        $id = (rand(1, 100000))
+        $nama = $_POST['nama_kepanitiaan'];
+        $organisasi = $_POST['organisasinya'];
+        $email = $_POST['email'];
+        $website = $_POST['website'];
+        $kategori = $_POST['kategori'];
+        $kontakcp = $_POST['kontak_cp'];
+        $logo = $_POST['logo'];
+        $deskripsi = $_POST['deskripsi'];
+        echo ("<h4>" .$logo. "</h4>")
+        // $url_berita = $_POST['url_berita'];
+        // $judul = $_POST['judul'];
+        // $topik = $_POST['topik'];
+        // $tags = $_POST['tags'];
+        // $jumlah_kata = $_POST['jumlah_kata'];
+        // $id_universitas = $_POST['id_universitas'];
+        // $sql = "INSERT INTO bmnc.berita VALUES('$url_berita','$judul','$topik','now','now',$jumlah_kata,0,$id_universitas)";
+        // if (pg_query($db,$sql)) {
+        //     echo "Data entered successfully. ";
+        // }else {
+        //     echo "Failed";
+        //     echo "errornya ".pg_last_error(); 
+        // }
+    
+    }
+?>

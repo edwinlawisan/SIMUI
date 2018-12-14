@@ -1,5 +1,10 @@
 <!-- Edwin Lawisan 1606876790 -->
 
+
+<?php
+include 'controller.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +37,7 @@
 						Username
 					</span>
 					<div class="wrap-input100 validate-input m-b-36" data-validate = "Username is required">
-						<input class="input100" type="text" name="username" >
+						<input class="input 100" name="username" type="text" placeholder="Username" value="<?php echo $username; ?>" autofocus autocomplete="off" required name="username"/><?php echo $usernameErr; ?>
 						<span class="focus-input100"></span>
 					</div>
 					
@@ -56,9 +61,7 @@
 						</div>
 
 						<div>
-							<a href="#" class="txt3">
-								Forgot Password?
-							</a>
+							<a href="javascript:void(0)" class="forgot-pass">Forgot Password</a>
 						</div>
 					</div>
 
@@ -85,6 +88,17 @@
 	<script src="vendor/daterangepicker/daterangepicker.js"></script>
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 	<script src="js/main.js"></script>
+	<script type="text/javascript">
+            $(document).ready(function () {
+                $('.forgot-pass').click(function(event) {
+                    $(".pr-wrap").toggleClass("show-pass-reset");
+                }); 
+
+                $('.pass-reset-submit').click(function(event) {
+                    $(".pr-wrap").removeClass("show-pass-reset");
+                }); 
+            });
+        </script>
 
 </body>
 </html>

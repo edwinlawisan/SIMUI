@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    
+
 <?php
 session_start();
 include 'navigationBar.php';
@@ -25,7 +25,7 @@ include 'navigationBar.php';
                     echo '<span style="color: dimgrey;">, </span>';
                     echo $_SESSION["username"];
                 } ?></span> !</h1>
-        <p class="lead" style="color: cornflowerblue">Access All the News in a Click!</p>
+        <p class="lead" style="color: cornflowerblue">HEHEHEHEHEHEHEHE</p>
         <hr class="my-4">
         <p style="color: #979A9A">Login to Access!</p>
         <p class="lead">

@@ -80,21 +80,6 @@ include 'navigationBar.php';
 			$kontakcp = $_POST['kontak_cp'];
 			$urlfile = $_POST['urlfile'];
 			$deskripsi = $_POST['deskripsi'];
-			
-
-			// $url_berita = $_POST['url_berita'];
-			// $judul = $_POST['judul'];
-			// $topik = $_POST['topik'];
-			// $tags = $_POST['tags'];
-			// $jumlah_kata = $_POST['jumlah_kata'];
-			// $id_universitas = $_POST['id_universitas'];
-			// $sql = "INSERT INTO bmnc.berita VALUES('$url_berita','$judul','$topik','now','now',$jumlah_kata,0,$id_universitas)";
-			// if (pg_query($db,$sql)) {
-			//     echo "Data entered successfully. ";
-			// }else {
-			//     echo "Failed";
-			//     echo "errornya ".pg_last_error(); 
-			// }
 		
 		}
 	?>

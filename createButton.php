@@ -12,7 +12,7 @@
             <p>
             <label class="w3-text-teal"><b>Organisasi yang membawahi</b></label>
             <select class="w3-select" name="organisasinya" required>
-                <option value="" disabled selected>Pilih Topik</option>
+                <option value="" disabled selected>Pilih Organisasi</option>
                 <?php 
                     $conn = connection();
                     $query = "SELECT p.id, p.nama FROM simui.pembuat_event p, simui.organisasi o WHERE p.id = o.id_organisasi";

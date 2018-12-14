@@ -11,6 +11,7 @@
     <!-- bootstrap csss -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
@@ -26,6 +27,7 @@ $row = pg_fetch_assoc($result);
 pg_close($dbconn);
 
 ?>
+
 
 <div class="container" style="margin-top: 40px;">
     <div class="jumbotron">
@@ -79,6 +81,21 @@ pg_close($dbconn);
 				<?php
 				echo '<h6 class="card-subtitle mb-2 text-muted">'.$row["alamat_website"].'</h6>';
 				?>
+				<button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-gray w3-medium">Update Comitte</button>
+				<?php
+					include 'updButton.php';
+				?>
+
+				<form method="POST" onsubmit="return confirm('Are you sure you want to delete this case?');">
+					<input type="hidden" name="_METHOD" value="DELETE">
+					<input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
+					<button type="submit">Delete Case</button>
+				</form>
+
+				<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-red w3-medium">Delete Comitte</button>
+				<?php
+				 	include 'delButton.php';
+				?> 
 			</div>
 		</div>
 	</div>	

@@ -85,21 +85,31 @@ pg_close($dbconn);
 				<?php
 					include 'updButton.php';
 				?>
+				<p></p>
 
-				<form method="POST" onsubmit="return confirm('Are you sure you want to delete this case?');">
-					<input type="hidden" name="_METHOD" value="DELETE">
+				<form method="POST" action="tampilkanKepanitiaan.php">
 					<input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
-					<button type="submit">Delete Case</button>
+					<button name="delete_button" class="w3-button w3-red w3-medium" type="submit">Delete</button>
 				</form>
-
-				<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-red w3-medium">Delete Comitte</button>
-				<?php
-				 	include 'delButton.php';
-				?> 
+				
 			</div>
 		</div>
 	</div>	
+	
 </div>
 
 </body>
+<?php
+	if (isset($_POST['delete_button'])) {    
+        $conecti = connection();
+		$id = $_POST['id'];
+		$sql1 = "DELETE FROM simui.pembuat_event WHERE id = '$id'" ;
+		if(pg_query($conecti,$sql1)){
+			echo "<script type='text/javascript'>alert('Berhasil di update')</script>";
+        } else {
+			echo "<script type='text/javascript'>alert('Gagal hapus')</script>";
+        }
+    
+    }			
+?>
 </html>
